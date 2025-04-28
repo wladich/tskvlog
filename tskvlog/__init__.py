@@ -14,7 +14,7 @@ def get_field_values(line: str, field_names: list[str]) -> list[str | None]:
             res.append(None)
             continue
         i1 += len(prefix)
-        i2 = line.find("\x09", i1 + 1)
+        i2 = line.find("\x09", i1)
         if i2 == -1:
             res.append(line[i1:])
         else:
